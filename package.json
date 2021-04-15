@@ -5,23 +5,23 @@
   "dependencies": {
     "classnames": "^2.2.6",
     "lodash": "^4.17.15",
-    "node-sass": "5.0.0",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
-    "react-ga": "3.3.0",
+    "node-sass": "^4.13.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-ga": "^2.7.0",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "4.0.3"
+    "react-scripts": "^3.4.1"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/cruip/open-react-template.git"
   },
   "scripts": {
+    "heroku-postbuild": "react-scripts build && (cd backend && yarn)",
     "start": "react-scripts start",
-    "build": "cd backend && yarn && npm start",
+    "build": "cd backend && yarn run start",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "heroku-postbuild": "react-scripts build"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -39,8 +39,8 @@
     ]
   },
   "engines": {
-    "node": "14.x",
-    "yarn": "1.x"
+    "yarn": "1.x",
+    "node": "14.x"
   },
   "devDependencies": {}
 }
