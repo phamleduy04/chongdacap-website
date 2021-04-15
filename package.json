@@ -17,8 +17,8 @@
     "url": "https://github.com/cruip/open-react-template.git"
   },
   "scripts": {
-    "start": "cd backend && yarn && npm start",
-    "build": "react-scripts build",
+    "start": "react-scripts start",
+    "build": "cd backend && yarn && npm start",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "heroku-postbuild": "react-scripts build"
