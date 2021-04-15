@@ -1,1 +1,1 @@
-web: yarn run heroku-frontend && yarn run heroku-backend
+web: yarn run build

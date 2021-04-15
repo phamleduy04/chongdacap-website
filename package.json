@@ -1,16 +1,41 @@
 {
-  "name": "chongdacap-website",
-  "version": "1.0.0",
-  "main": "index.js",
-  "repository": "https://github.com/phamleduy04/chongdacap-website.git",
-  "author": "<phamleduy04@gmail.com>",
-  "license": "MIT",
-  "scripts": {
-    "heroku-frontend": "cd frontend && yarn && yarn run build",
-    "heroku-backend": "cd backend && yarn && yarn run start"
+  "name": "open-react-template",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "lodash": "^4.17.15",
+    "node-sass": "5.0.0",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-ga": "3.3.0",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "4.0.3"
   },
-  "engines": {
-    "yarn": "1.x",
-    "node": "14.x"
-  }
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cruip/open-react-template.git"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build && (cd backend && yarn && yarn run start)",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {}
 }
