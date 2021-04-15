@@ -18,8 +18,7 @@
   },
   "scripts": {
     "heroku-postbuild": "react-scripts build && (cd backend && yarn)",
-    "start": "react-scripts start",
-    "build": "cd backend && yarn run start",
+    "start": "cd backend && yarn run start",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
