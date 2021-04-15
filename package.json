@@ -10,6 +10,7 @@
     "heroku-backend": "cd backend && yarn && yarn run start"
   },
   "engines": {
-    "yarn": "1.x"
+    "yarn": "1.x",
+    "node": "14.x"
   }
 }
