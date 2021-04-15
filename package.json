@@ -8,5 +8,8 @@
   "scripts": {
     "heroku-frontend": "cd frontend && yarn && yarn run build",
     "heroku-backend": "cd backend && yarn && yarn run start"
+  },
+  "engines": {
+    "yarn": "1.x"
   }
 }
