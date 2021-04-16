@@ -4,7 +4,14 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const app = express();
+require('dotenv').config();
+const { NODE_ENV = 'development' } = process.env;
 
+// force SSL
+const forceSSL = (req, res, next) => {
+  if (req.headers['x-forwarded-proto'] !== 'https') return res.redirect(['https://', req.get('Host'), req.url].join(''));
+  return next();
+};
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
@@ -23,6 +30,7 @@ console.log(path.join(__dirname, '..', 'build'));
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '..', 'build', 'index.html'));
 });
+if (NODE_ENV === 'production') app.use(forceSSL);
 app.use('/api', require('./routes/api'));
 
 // catch 404 and forward to error handler
