@@ -1,7 +1,6 @@
 {
-  "name": "open-react-template",
-  "version": "0.1.0",
-  "private": true,
+  "name": "chongdacap-website",
+  "version": "0.0.1",
   "dependencies": {
     "classnames": "^2.2.6",
     "heroku-ssl-redirect": "^0.1.1",
@@ -15,11 +14,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/cruip/open-react-template.git"
+    "url": "https://github.com/phamleduy04/chongdacap-website.git"
   },
   "scripts": {
     "heroku-postbuild": "react-scripts build && (cd backend && yarn)",
     "start": "cd backend && yarn run start",
+    "dev": "react-scripts start",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

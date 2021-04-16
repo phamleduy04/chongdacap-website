@@ -18,7 +18,7 @@ const FooterSocial = ({
     >
       <ul className="list-reset">
         <li>
-          <a href="https://facebook.com/leduy2004" target='_blank'>
+          <a href="https://facebook.com/leduy2004" target="_blank" rel="noopener noreferrer">
             <svg
               width="16"
               height="16"

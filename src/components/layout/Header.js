@@ -15,7 +15,7 @@ const propTypes = {
 const defaultProps = {
   navPosition: '',
   hideNav: false,
-  hideSignin: false,
+  hideSignin: true,
   bottomOuterDivider: false,
   bottomDivider: false
 }
@@ -86,7 +86,6 @@ const Header = ({
             bottomDivider && 'has-bottom-divider'
           )}>
           <Logo />
-          {/*
           {!hideNav &&
             <>
               <button
@@ -112,9 +111,7 @@ const Header = ({
                       'list-reset text-xs',
                       navPosition && `header-nav-${navPosition}`
                     )}>
-                    <li>
-                      <Link to="#0" onClick={closeMenu}>Documentation</Link>
-                    </li>
+                    <a href="https://forms.gle/siaNRNQgNemtVWou5" target='_blank' rel='noopener noreferrer'> Report đa cấp</a>
                   </ul>
                   {!hideSignin &&
                     <ul
@@ -127,7 +124,6 @@ const Header = ({
                 </div>
               </nav>
             </>}
-                  */}
         </div>
       </div>
     </header>
