@@ -8,14 +8,14 @@ const getFBID = require('get-fbid');
 router.get('/blacklist', async (req, res, next) => {
     const { type = "json" } = req.query;
     const stuff = await getArr();
-    if (type == 'array') return res.status(200).send(stuff);
+    if (type.toLowerCase() === 'array') return res.status(200).send(stuff);
     return res.status(200).json({ success: true, response: stuff, length: stuff.length });
 });
 
 /* POST /upload with auth */
 router.post('/upload', async (req, res, next) => {
     const apiKey = req.headers.authorization;
-    if (!apiKey || !apiKey.startsWith('Bearer') || apiKey.replace('Bearer', '').trim() != APIKEY) return res.sendStatus(401);
+    if (!apiKey || !apiKey.startsWith('Bearer') || apiKey.replace('Bearer', '').trim() !== APIKEY) return res.sendStatus(401);
     const { ID, tagName, evidence = [] } = req.body;
     const check = await get(ID);
     if (check) return res.json({ success: false, duplicate: true });
