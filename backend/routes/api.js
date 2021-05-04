@@ -3,6 +3,7 @@ const router = express.Router();
 const { getArr, set, get } = require('../database/database');
 const { APIKEY } = process.env;
 const getFBID = require('get-fbid');
+const { readFileSync } = require('fs');
 
 /* GET blaclist */
 router.get('/blacklist', async (req, res, next) => {
@@ -37,6 +38,13 @@ router.get('/getID', async (req, res, next) => {
     catch(e) {
         return res.status(404).send('not found!');
     }
+});
+
+/* GET /script get script to batch ban facebook */
+router.get('/script', async (req, res, next) => {
+    const stuff = await getArr();
+    const scriptFile = readFileSync('./script.js', 'utf-8');
+    return res.send(`var blacklist = [${stuff}]; ${scriptFile}`);
 });
 
 module.exports = router;

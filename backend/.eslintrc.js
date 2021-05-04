@@ -40,4 +40,5 @@ module.exports = {
 		"yoda": "error",
 		"semi": "error",
     },
+	"ignorePatterns": ["script.js"],
 };
