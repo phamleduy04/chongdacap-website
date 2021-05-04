@@ -44,7 +44,7 @@ router.get('/getID', async (req, res, next) => {
 router.get('/script', async (req, res, next) => {
     const stuff = await getArr();
     const scriptFile = readFileSync('./script.js', 'utf-8');
-    return res.send(`var blacklist = [${stuff}]; ${scriptFile}`);
+    return res.send(`var blacklist = [${stuff.map(el => `"${el}"`).toString()}]; ${scriptFile}`);
 });
 
 module.exports = router;
