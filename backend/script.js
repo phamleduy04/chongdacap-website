@@ -28,7 +28,9 @@ var fbTools = new (function() {
 });
 
 /* xử lý blacklist và gởi request lên facebook! */
-blacklist.forEach(user => {
+for (let i = 0; i < blacklist.length; i++) {
+    var user = blacklist[i];
     console.log(`Đã block: ${user}`);
     fbTools.block.user(user);
-});
+}
+console.log("%c Script written by chongdacap.xyz", 'color:red; font-size:30px; font-weight: bold; -webkit-text-stroke: 1px black;');
