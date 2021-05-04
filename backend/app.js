@@ -28,6 +28,10 @@ app.get('/', (req, res) => {
 });
 app.use('/api', require('./routes/api'));
 
+app.get('/blockdacap', (req, res) => {
+  res.redirect('https://github.com/phamleduy04/chongdacap/wiki/Block-h%C3%A0ng-lo%E1%BA%A1t-%C4%91a-c%E1%BA%A5p');
+});
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
