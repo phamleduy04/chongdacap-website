@@ -121,6 +121,13 @@ const Header = ({
                         <Link to="#0" className="button button-primary button-wide-mobile button-sm" onClick={closeMenu}>Sign up</Link>
                       </li>
                     </ul>}
+                  { 
+                  <ul
+                    className="list-reset header-nav-right"
+                  >
+                    <a href="https://github.com/phamleduy04/chongdacap/wiki/Block-h%C3%A0ng-lo%E1%BA%A1t-%C4%91a-c%E1%BA%A5p" target='_blank' rel='noopener noreferrer'> Block đa cấp</a>
+                  </ul>
+                  }
                 </div>
               </nav>
             </>}
